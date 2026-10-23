@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#04101a"><script>document.documentElement.className+=" js"</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/site.css">
+<title>Experience — LTX, the world model</title>
+<meta name="description" content="Step inside the LTX world model: an interactive 3D journey from perception to control to the physical world.">
+<link rel="stylesheet" href="css/experience.css">
+</head>
+<body class="exp">
+<div class="curtain" id="curtain" aria-hidden="true"><svg viewBox="0 0 75 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h6.4v25.8H21V32H0z"/><path fill="#fff" d="M23.5 0H47v6.2h-8.6V32H32V6.2h-8.5z"/><path fill="#fff" d="M49.6 0h7.6l4.6 9.4L66.4 0H74l-8.4 15.6L74.6 32H67l-5.2-10.6L56.6 32H49l9-16.4z"/></svg><div class="curtain-bar"><i></i></div></div><div class="scroll-progress" id="progress" aria-hidden="true"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<header class="nav" id="nav"><a class="logo" href="index.html" aria-label="LTX home" data-transition><svg viewBox="0 0 75 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h6.4v25.8H21V32H0z"/><path fill="#fff" d="M23.5 0H47v6.2h-8.6V32H32V6.2h-8.5z"/><path fill="#fff" d="M49.6 0h7.6l4.6 9.4L66.4 0H74l-8.4 15.6L74.6 32H67l-5.2-10.6L56.6 32H49l9-16.4z"/></svg></a><nav class="nav-links" aria-label="Primary"><a href="experience.html" aria-current="page">Experience</a><a href="models.html">Models</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></nav><div class="nav-right"><a class="try" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now</a><button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button></div></header><div class="menu" id="menu" aria-hidden="true"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="models.html">Models</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
+
+<main id="scroll">
+  <section class="chapter chapter--hero" data-chapter="0" data-name="Intro">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal" data-onload>LTX-2.5 · Interactive</p>
+      <h1 class="display h-xl" data-split data-split-onload>Step inside the world model</h1>
+      <p class="lede reveal" data-onload data-delay="0.35">Not a video. A place that understands itself — scroll to move through it.</p>
+    </div>
+    <div class="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </section>
+
+  <section class="chapter" data-chapter="1" data-name="Perceive" id="perceive">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal">01 — Perceive</p>
+      <h2 class="display h-lg" data-split>It sees the room, not just the frame.</h2>
+      <p class="lede reveal">Geometry, materials, light and people are understood as one scene — so every frame stays faithful to the world it came from.</p>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="2" data-name="Direct" id="direct">
+    <div class="copy copy--right">
+      <p class="eyebrow reveal">02 — Direct</p>
+      <h2 class="display h-lg" data-split>Every variable becomes a dial.</h2>
+      <p class="lede reveal">Change the scene, the lighting, the clothing or the cast — and nothing else moves. Control without regenerating the world.</p>
+      <ul class="chips reveal" aria-label="Controls">
+        <li>Scene</li><li>Lighting</li><li>Clothing</li><li>Cast</li>
+      </ul>
+      <a class="btn reveal" href="index.html">Try the controller <span class="arr">→</span></a>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="3" data-name="Simulate" id="simulate">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal">03 — Simulate</p>
+      <h2 class="display h-lg" data-split>Consistent across every shot.</h2>
+      <p class="lede reveal">Production-grade video that holds together from the first frame to the last, cut to cut, state to state.</p>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="4" data-name="Operate" id="operate">
+    <div class="copy copy--right">
+      <p class="eyebrow reveal">04 — Operate</p>
+      <h2 class="display h-lg" data-split>From pixels to the physical world.</h2>
+      <p class="lede reveal">The same understanding that renders a scene can reason about one — the foundation for systems that operate in the real world.</p>
+    </div>
+  </section>
+
+  <section class="chapter chapter--cta" data-chapter="5" data-name="Begin">
+    <div class="copy copy--center">
+      <h2 class="display h-xl" data-split>Take control.</h2>
+      <div class="cta-row reveal">
+        <a class="btn btn--solid" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now <span class="arr">→</span></a>
+        <a class="btn" href="models.html">Explore models <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside class="rail" id="rail" aria-label="Chapters"></aside>
+<div class="hud" id="hud" aria-hidden="true"><span id="hudA">MORPH 0.00</span><span id="hudB">FIELD 0.18</span><span id="hudC">CH 00</span></div>
+
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><p class="cta-line">Build with the world model.</p><a class="btn" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now <span class="arr">→</span></a></div><div><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="experience.html">Experience</a></li><li><a href="models.html">Models</a></li><li><a href="pricing.html">Pricing</a></li></ul></div><div><h3>Company</h3><ul><li><a href="contact.html">Contact</a></li><li><a href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Launch app</a></li></ul></div></div><div class="footer-mark" aria-hidden="true"><svg viewBox="0 0 75 32" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 0h6.4v25.8H21V32H0z"/><path fill="#fff" d="M23.5 0H47v6.2h-8.6V32H32V6.2h-8.5z"/><path fill="#fff" d="M49.6 0h7.6l4.6 9.4L66.4 0H74l-8.4 15.6L74.6 32H67l-5.2-10.6L56.6 32H49l9-16.4z"/></svg></div><div class="footer-bottom"><span>© 2026 LTX. All rights reserved.</span><span>LTX-2.5 — Smarter. Faster.</span></div></div></footer>
+
+<script src="vendor/gsap.min.js"></script><script src="vendor/ScrollTrigger.min.js"></script><script src="vendor/lenis.min.js"></script><script src="js/site.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="js/scene3d.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{HEAD}}
+<title>Experience — LTX, the world model</title>
+<meta name="description" content="Step inside the LTX world model: an interactive 3D journey from perception to control to the physical world.">
+<link rel="stylesheet" href="css/experience.css">
+</head>
+<body class="exp">
+{{CURTAIN}}
+<canvas id="gl" aria-hidden="true"></canvas>
+{{NAV}}
+
+<main id="scroll">
+  <section class="chapter chapter--hero" data-chapter="0" data-name="Intro">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal" data-onload>LTX-2.5 · Interactive</p>
+      <h1 class="display h-xl" data-split data-split-onload>Step inside the world model</h1>
+      <p class="lede reveal" data-onload data-delay="0.35">Not a video. A place that understands itself — scroll to move through it.</p>
+    </div>
+    <div class="cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+  </section>
+
+  <section class="chapter" data-chapter="1" data-name="Perceive" id="perceive">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal">01 — Perceive</p>
+      <h2 class="display h-lg" data-split>It sees the room, not just the frame.</h2>
+      <p class="lede reveal">Geometry, materials, light and people are understood as one scene — so every frame stays faithful to the world it came from.</p>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="2" data-name="Direct" id="direct">
+    <div class="copy copy--right">
+      <p class="eyebrow reveal">02 — Direct</p>
+      <h2 class="display h-lg" data-split>Every variable becomes a dial.</h2>
+      <p class="lede reveal">Change the scene, the lighting, the clothing or the cast — and nothing else moves. Control without regenerating the world.</p>
+      <ul class="chips reveal" aria-label="Controls">
+        <li>Scene</li><li>Lighting</li><li>Clothing</li><li>Cast</li>
+      </ul>
+      <a class="btn reveal" href="index.html">Try the controller <span class="arr">→</span></a>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="3" data-name="Simulate" id="simulate">
+    <div class="copy copy--left">
+      <p class="eyebrow reveal">03 — Simulate</p>
+      <h2 class="display h-lg" data-split>Consistent across every shot.</h2>
+      <p class="lede reveal">Production-grade video that holds together from the first frame to the last, cut to cut, state to state.</p>
+    </div>
+  </section>
+
+  <section class="chapter" data-chapter="4" data-name="Operate" id="operate">
+    <div class="copy copy--right">
+      <p class="eyebrow reveal">04 — Operate</p>
+      <h2 class="display h-lg" data-split>From pixels to the physical world.</h2>
+      <p class="lede reveal">The same understanding that renders a scene can reason about one — the foundation for systems that operate in the real world.</p>
+    </div>
+  </section>
+
+  <section class="chapter chapter--cta" data-chapter="5" data-name="Begin">
+    <div class="copy copy--center">
+      <h2 class="display h-xl" data-split>Take control.</h2>
+      <div class="cta-row reveal">
+        <a class="btn btn--solid" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now <span class="arr">→</span></a>
+        <a class="btn" href="models.html">Explore models <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside class="rail" id="rail" aria-label="Chapters"></aside>
+<div class="hud" id="hud" aria-hidden="true"><span id="hudA">MORPH 0.00</span><span id="hudB">FIELD 0.18</span><span id="hudC">CH 00</span></div>
+
+{{FOOTER}}
+
+{{SCRIPTS_CORE}}
+<script src="vendor/three.min.js"></script>
+<script src="js/scene3d.js"></script>
+</body>
+</html>

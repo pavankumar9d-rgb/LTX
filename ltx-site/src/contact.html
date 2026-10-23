@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{HEAD}}
+<title>Contact — LTX</title>
+<meta name="description" content="Talk to the LTX team about world models, enterprise deployments and partnerships.">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+{{CURTAIN}}
+{{NAV}}
+
+<main>
+  <section class="page-hero" style="min-height:60vh">
+    <div class="wrap">
+      <p class="eyebrow reveal" data-onload>Contact</p>
+      <h1 class="display h-xl" data-split data-split-onload>Let’s build the world.</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="lede reveal">Tell us what you’re making. Studios, platforms and research teams — we read everything.</p>
+        <div class="contact-meta reveal">
+          <div><small>Email</small><a id="mailLink" href="mailto:hello@example.com">hello@example.com</a></div>
+          <div><small>App</small><a href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">app.ltx.io</a></div>
+        </div>
+      </div>
+
+      <div class="glass-card reveal">
+        <form class="contact" id="contactForm" novalidate>
+          <div class="row2">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required><span class="err" id="e-name" aria-live="polite"></span></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><span class="err" id="e-email" aria-live="polite"></span></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div>
+            <div class="field"><label for="topic">Topic</label>
+              <select id="topic" name="topic"><option>Product</option><option>Enterprise</option><option>Partnership</option><option>Press</option><option>Something else</option></select></div>
+          </div>
+          <div class="field"><label for="message">Message</label><textarea id="message" name="message" required></textarea><span class="err" id="e-message" aria-live="polite"></span></div>
+          <button class="btn btn--solid" type="submit">Send message <span class="arr">→</span></button>
+          <p class="form-note">Sending opens your email app with the message prepared.</p>
+        </form>
+        <div class="form-ok" id="formOk" role="status">
+          <h3>Thank you.</h3>
+          <p>Your email app should have opened with your message. If it didn’t, write to us directly.</p>
+          <button class="btn" type="button" id="again">Send another</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{SCRIPTS_CORE}}
+<script src="js/contact.js"></script>
+</body>
+</html>

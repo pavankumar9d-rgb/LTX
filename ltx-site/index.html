@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LTX — The world model</title>
+<meta name="description" content="LTX builds open world models that give you full control, from production-grade video to systems that understand and operate in the physical world.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+<main class="stage" id="stage">
+
+  <!-- Eight persistent clips. src is fixed; never swapped. Order: forward / reverse per control. -->
+  <video class="media" id="v1"  data-clip="1f" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-1.mp4"         muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v1r" data-clip="1r" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-1-reverse.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v2"  data-clip="2f" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-2.mp4"         muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v2r" data-clip="2r" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-2-reverse.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v3"  data-clip="3f" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-3.mp4"         muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v3r" data-clip="3r" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-3-reverse.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v4"  data-clip="4f" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-4.mp4"         muted playsinline preload="auto" aria-hidden="true"></video>
+  <video class="media" id="v4r" data-clip="4r" src="https://pub-86dc5b5484314368ac5436a674b0d919.r2.dev/designs/video-4-reverse.mp4" muted playsinline preload="auto" aria-hidden="true"></video>
+
+  <section class="hero">
+    <h1><span>The</span> <span>world</span> <span>model</span></h1>
+    <p>LTX builds open world models that give you full control, from production-grade video to systems that understand and operate in the physical world.</p>
+  </section>
+
+  <div class="controller" id="controller" role="group" aria-label="Scene state controller" data-pos="0">
+    <div class="glass track" aria-hidden="true"></div>
+    <div class="glass capsule" aria-hidden="true"></div>
+    <div class="cells">
+      <div class="cell label"><span class="t">Select state →</span></div>
+      <button type="button" class="cell" data-branch="scene"    data-label="Scene"    data-index="1" data-ready="0" disabled><span class="t">Scene</span></button>
+      <button type="button" class="cell" data-branch="light"    data-label="Lighting" data-index="2" data-ready="0" disabled><span class="t">Lighting</span></button>
+      <button type="button" class="cell" data-branch="colorway" data-label="Clothing" data-index="3" data-ready="0" disabled><span class="t">Clothing</span></button>
+      <button type="button" class="cell" data-branch="fullLook" data-label="Cast"     data-index="4" data-ready="0" disabled><span class="t">Cast</span></button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <a class="logo" href="index.html" aria-label="LTX home">
+        <!-- Wordmark: 3 paths, viewBox 0 0 75 32. Swap in the official path data if you have it. -->
+        <svg viewBox="0 0 75 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+          <path fill="#fff" d="M0 0h6.4v25.8H21V32H0z"/>
+          <path fill="#fff" d="M23.5 0H47v6.2h-8.6V32H32V6.2h-8.5z"/>
+          <path fill="#fff" d="M49.6 0h7.6l4.6 9.4L66.4 0H74l-8.4 15.6L74.6 32H67l-5.2-10.6L56.6 32H49l9-16.4z"/>
+        </svg>
+      </a>
+      <div class="meta">
+        <a href="experience.html">LTX-2.5 is here</a>
+        <a href="models.html">Smarter. Faster</a>
+      </div>
+    </div>
+    <a class="try" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Try now</a>
+  </header>
+
+  <div class="sr-only" id="status" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="notice" id="notice" hidden role="alert">
+    <span id="noticeText"></span>
+    <button type="button" id="retry">Retry</button>
+  </div>
+</main>
+<script src="js/home.js"></script>
+</body>
+</html>

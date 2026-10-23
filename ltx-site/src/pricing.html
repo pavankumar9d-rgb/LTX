@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+{{HEAD}}
+<title>Pricing — LTX</title>
+<meta name="description" content="Simple plans for creators, studios and enterprises building with LTX world models.">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+{{CURTAIN}}
+{{NAV}}
+
+<!-- NOTE: plan names, prices and feature bullets below are ILLUSTRATIVE placeholders.
+     Replace the data-monthly / data-annual values and the <li> text with LTX's real offering before launch. -->
+<main>
+  <section class="page-hero" style="min-height:70vh">
+    <div class="wrap">
+      <p class="eyebrow reveal" data-onload>Pricing</p>
+      <h1 class="display h-xl" data-split data-split-onload>Pay for control.</h1>
+      <p class="lede reveal" data-onload data-delay="0.3" style="margin-top:32px">Start free. Scale to a studio. Go private when the world model becomes infrastructure.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="toggle reveal" role="group" aria-label="Billing period" id="billing">
+        <span class="thumb" aria-hidden="true"></span>
+        <button type="button" data-period="monthly" aria-pressed="true">Monthly</button>
+        <button type="button" data-period="annual" aria-pressed="false">Annual · save 20%</button>
+      </div>
+
+      <div class="plans">
+        <article class="glass-card plan reveal">
+          <h3>Explorer</h3>
+          <div class="price"><span data-price data-monthly="0" data-annual="0">0</span><small>$ / month</small></div>
+          <p class="desc">Try all four controls and see what a world model feels like.</p>
+          <ul><li>Scene, Lighting, Clothing and Cast</li><li>Preview-quality exports</li><li>Community support</li></ul>
+          <a class="btn" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Start free <span class="arr">→</span></a>
+        </article>
+
+        <article class="glass-card plan plan--hot reveal" data-delay="0.1">
+          <span class="tag">Most popular</span>
+          <h3>Studio</h3>
+          <div class="price"><span data-price data-monthly="49" data-annual="39">49</span><small>$ / month</small></div>
+          <p class="desc">For teams shipping production-grade video every week.</p>
+          <ul><li>Everything in Explorer</li><li>Full-resolution exports</li><li>Priority generation</li><li>Commercial licence</li></ul>
+          <a class="btn btn--solid" href="https://app.ltx.io/" target="_blank" rel="noopener noreferrer">Get Studio <span class="arr">→</span></a>
+        </article>
+
+        <article class="glass-card plan reveal" data-delay="0.2">
+          <h3>Enterprise</h3>
+          <div class="price"><span>Custom</span></div>
+          <p class="desc">Private deployment and tailored models for physical-world systems.</p>
+          <ul><li>Everything in Studio</li><li>Private or on-prem deployment</li><li>Custom fine-tuning</li><li>Security review &amp; SLA</li></ul>
+          <a class="btn" href="contact.html">Talk to us <span class="arr">→</span></a>
+        </article>
+      </div>
+
+      <div class="faq">
+        <h2 class="display h-md reveal">Questions</h2>
+        <details class="reveal"><summary>What is a world model?</summary><p>A model that understands a scene — its space, light, materials and people — well enough to change one thing while keeping everything else consistent.</p></details>
+        <details class="reveal"><summary>Can I switch plans later?</summary><p>Yes. Upgrade or downgrade whenever you need; changes apply on your next billing date.</p></details>
+        <details class="reveal"><summary>Do you offer private deployment?</summary><p>Enterprise plans can run privately. <a href="contact.html" style="border-bottom:1px solid rgb(255 255 255 / .4)">Get in touch</a> and we’ll scope it with you.</p></details>
+        <details class="reveal"><summary>Is there a free way to try it?</summary><p>The Explorer plan is free, and the home page controller lets you feel the four controls straight away.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+{{FOOTER}}
+{{SCRIPTS_CORE}}
+<script src="js/pricing.js"></script>
+</body>
+</html>
